@@ -10,6 +10,9 @@ use thiserror::Error;
 mod save_info;
 pub use save_info::*;
 
+mod input_options;
+pub use input_options::*;
+
 pub trait FromRawError: Error {}
 
 #[derive(Debug, Error)]
