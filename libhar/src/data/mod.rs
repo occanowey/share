@@ -19,6 +19,9 @@ pub use input_options::*;
 mod sound_options;
 pub use sound_options::*;
 
+mod camera_options;
+pub use camera_options::*;
+
 pub trait FromRawError: Error {}
 
 #[derive(Debug, Error)]
