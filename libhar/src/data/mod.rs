@@ -16,6 +16,9 @@ pub use save_info::*;
 mod input_options;
 pub use input_options::*;
 
+mod sound_options;
+pub use sound_options::*;
+
 pub trait FromRawError: Error {}
 
 #[derive(Debug, Error)]

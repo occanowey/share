@@ -3,7 +3,7 @@ use thiserror::Error;
 
 use super::{FromRawError, RawBool, ToBoolError};
 
-#[derive(Debug, Pod, Clone, Copy, Zeroable)]
+#[derive(Debug, Clone, Copy, Pod, Zeroable)]
 #[repr(C, packed(1))]
 pub struct RawInputOptions {
     rumble_enabled: RawBool<0xff, 0x00>,
