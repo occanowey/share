@@ -2,8 +2,7 @@ use std::{fs, io::Read, path::PathBuf};
 
 use clap::Parser;
 use color_eyre::Result;
-use tracing::{info, level_filters::LevelFilter};
-use tracing_subscriber::{EnvFilter, prelude::*};
+use tracing::info;
 
 /// har
 ///
@@ -15,22 +14,8 @@ struct Args {
     save_path: PathBuf,
 }
 
-fn setup() -> Result<Args> {
-    tracing_subscriber::registry()
-        .with(tracing_subscriber::fmt::layer())
-        .with(
-            EnvFilter::builder()
-                .with_default_directive(LevelFilter::INFO.into())
-                .from_env_lossy(),
-        )
-        .init();
-
-    color_eyre::install()?;
-    Ok(Args::parse())
-}
-
 fn main() -> Result<()> {
-    let args = setup()?;
+    let args: Args = har::setup()?;
     dbg!(&args);
 
     let file = fs::File::open(args.save_path)?;
