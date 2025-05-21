@@ -22,6 +22,9 @@ pub use sound_options::*;
 mod camera_options;
 pub use camera_options::*;
 
+mod tutorial_options;
+pub use tutorial_options::*;
+
 mod gui_options;
 pub use gui_options::*;
 

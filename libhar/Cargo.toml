@@ -11,4 +11,5 @@ generic-array = "1.2.0"
 crc = "3.3.0"
 
 bytemuck = { version = "1.23.0", features = ["derive", "min_const_generics"] }
+bitmask-enum = "2.2.5"
 chrono = "0.4.41"
